@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Russo One';
+  background-color: #8d8d8d;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.background {
+  background-color: #b3b3b3;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  border: 5px solid orange;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
+  margin-right: 30px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: grey;
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px black;
+  cursor: pointer;
+  transition: all ease .5s;
+}
+
+.btn.active {
+  background-color: orange;
+  box-shadow: 4px 4px 5px yellow;
+  transform: translateY(4px);
+}
+
+.settings {
+  margin-left: 20px;
+  
+}
+
+.control, .volume-slider{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.state {
+  margin: 0;
+}
+
+.stateON {
+  color: Green;
+}
+
+.stateOFF {
+  color: Red;
+}
+
+.select {
+  height: 25px;
+  width: 55px;
+  background-color: black;
+  padding: 3px;
+}
+
+.inner {
+  height: 100%;
+  width: 50%;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.powerInner {
+  float: right;
+}
+
+.inner.powerOff {
+  float: left;
+}
+
+.bankInner {
+  float: left;
+}
+
+.inner.bankON {
+  float: right;
+}
+
+.display {
+  height: 50px;
+  width: 200px;
+  background-color: grey;
+  margin: auto;
+  margin-block: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+input[type="range"] {
+  appearance: none;
+  width: 240px;
+  height: 6px;
+  background-color: rgb(129, 133, 137);
+  border: 1px solid black;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 8px;
+  height: 25px;
+  background: blue;
+}
